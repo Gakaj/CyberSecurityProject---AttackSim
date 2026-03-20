@@ -1,0 +1,78 @@
+Steps for project:
+
+
+Program Should:
+    Simulate common attacks:
+        -brute force
+        -dictionary attacks
+        -compares hashing algorithms?
+
+What you can include:
+    -SHA-256 vs bcrypt vs plaintext ( research SHA-256 )
+    -Entropy calculation /
+    -time-to-crack simulations ( clock function )
+    -salting explanation ( research )
+    -rate limiting ( research )
+
+
+Extension tasks:
+    -Compare user created vs computer generated passwords
+
+
+Steps of how to carry out attack simulator:
+
+- Find out how attack works.
+- Find dictionary of common password matches, could use data leaks.
+    - simulate attack importing common words in index of a txt.documents
+    - if a hit/match, save word to list (append).
+    - once iterated to final char of password, output list.
+
+- Do same for brute force? Is there a difference?
+
+
+WHAT EACH MODULE MEANS::
+
+entropy.py → calculate password entropy
+
+hashing.py → hash + verify passwords
+
+attack.py → simulate brute force + dictionary attack
+
+main.py → "glue" everything together
+::::::::::::::::::::::::::::::::::::::::::
+User password
+      ↓
+Entropy module
+      ↓
+Hashing module
+      ↓
+Attack module
+      ↓
+Results
+::::::::::::::::::::::::::::::::::::::::::
+  ↓
+User enters password
+
+Calculate entropy
+
+Hash password
+
+Pass hash to attack simulation
+
+Output results
+
+
+Framework/ checklist: (after Entropy)
+Create hashing.py
+Implement hashing (e.g., SHA-256)
+Create main.py
+Get user input
+Call entropy
+Call hashing
+Print both values
+Then once that works:
+Add attack module
+Add dictionary attack
+Add brute-force simulation
+
+Salting demonstation

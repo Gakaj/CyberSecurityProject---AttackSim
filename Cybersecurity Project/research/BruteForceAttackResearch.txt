@@ -1,0 +1,29 @@
+Dictionary attacks are more defined
+    use a file containing words, phrases, common passwords, and other likely combinations. 
+    Dictionary attacks use this pre-assembled list to guess passwords. 
+        :: often derived from dictionaries.
+    This method is based on the tendency of many users to choose simple, common words or phrases.
+        Making dictionary attacks faster and less resource intensive compared to brute force attacks.
+
+Simple brute force: trying every possible combination .
+    Exhaustive trial and error
+    Systematically attempting every possible combination of characters until the correct password is discovered.
+
+
+When simulating a dictionary attack:
+
+1.Load dictionary into memory
+
+2.For each word:
+
+3.Hash it (using same method as stored password)
+
+4.Compare to stored hash
+
+5.Stop if match found
+
+6.Count attempts
+
+7.Record time taken
+
+“The dictionary attack simulation models an attacker attempting authentication using a ranked list of common passwords.”

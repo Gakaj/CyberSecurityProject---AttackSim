@@ -6,7 +6,10 @@
  This project consists of files: 
  "Attack.py", "Entropy.py", "Hashing.py" and a txt file - common_passwords.txt 
 
-"Common_passwords.txt" grabbed from 
+"Common_passwords.txt" accredited from GitHub Cosec Lists[...]
+<a>
+ <img [pic] >
+ <a\>
 
 Files Summary:
 

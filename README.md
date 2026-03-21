@@ -6,7 +6,7 @@
  This project consists of files: 
  "Attack.py", "Entropy.py", "Hashing.py" and a txt file - common_passwords.txt 
 
-Common_passwords.txt accredited from [SecLists](/https://github.com/danielmiessler/SecLists/tree/master) - Compiled by DanielMiessler
+Common_passwords.txt accredited from [SecLists](https://github.com/danielmiessler/SecLists/tree/master) - Compiled by DanielMiessler
 
 
 <insFiles Summary:<\ins>

@@ -33,3 +33,7 @@ Attack module
 
 5.Output results
 
+| entropy.py | hashing.py | attack.py | main.py   |
+| Use entropy formula | hashing.py | attack.py | main.py   |
+| entropy.py | hashing.py | attack.py | main.py   |
+| entropy.py | hashing.py | attack.py | main.py   |

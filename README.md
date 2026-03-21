@@ -2,13 +2,13 @@
 
 This project consists of files: "Attack.py", "Entropy.py", "Hashing.py" and a txt file - common_passwords.txt 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-WHAT EACH MODULE MEANS:: Defined inside scope ( research folder )
+# WHAT EACH MODULE MEANS:: Defined inside scope ( research folder )
 
-entropy.py → calculate password entropy
-hashing.py → hash + verify passwords
-attack.py → simulate brute force + dictionary attack
-main.py → "glue" everything together ( calls 3 modules before ) 
-::::::::::::::::::::::::::::::::::::::::::
+# entropy.py → calculate password entropy
+# hashing.py → hash + verify passwords
+# attack.py → simulate brute force + dictionary attack
+# main.py → "glue" everything together ( calls 3 modules before ) 
+#  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 User password
       ↓
 Entropy module

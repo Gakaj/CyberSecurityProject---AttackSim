@@ -1,4 +1,7 @@
 # CyberSecurityProject---AttackSim
+<!-- no official site warning -->
+> [!CAUTION]
+> WORK IN PROGRESS
 
 This project consists of files: "Attack.py", "Entropy.py", "Hashing.py" and a txt file - common_passwords.txt 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------

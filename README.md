@@ -19,12 +19,12 @@ Common_passwords.txt accredited from [SecLists](https://github.com/danielmiessle
 | entropy.py | hashing.py | attack.py | main.py   |
 |------------|------------|-----------|-----------|
 | Uses entropy formula | Uses SHA-256 cryptography | Uses different methods | Glues all files    |
-| Entropy Formula| [More info](https://www.geeksforgeeks.org/ethical-hacking/passwords-entropy-cracking/)| View [BFAR.txt](https://github.com/Gakaj/CyberSecurityProject---AttackSim/blob/main/Cybersecurity%20Project/research/BruteForceAttackResearch.txt)  | ***Final Program***|
+| <details><summary>Entropy Equation</summary>E = L x log<sub>2</sub>(R)</details> | [More info](https://www.geeksforgeeks.org/ethical-hacking/passwords-entropy-cracking/)| View [BFAR.txt](https://github.com/Gakaj/CyberSecurityProject---AttackSim/blob/main/Cybersecurity%20Project/research/BruteForceAttackResearch.txt)  | ***Final Program***|
 
 Accreddited OWASP.org for info on [dictionary attacks](https://owasp.org/www-community/attacks/Brute_force_attack).
-Also accredit [account enumeration](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/04-Testing_for_Account_Enumeration_and_Guessable_User_Account)
+Also accredit for [account enumeration techniques](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/04-Testing_for_Account_Enumeration_and_Guessable_User_Account)
 
-<details><summary>Entropy Equation</summary>E = L x log<sub>2</sub>(R)</details>
+
 
 
 

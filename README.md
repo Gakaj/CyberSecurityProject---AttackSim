@@ -16,4 +16,4 @@ Common_passwords.txt accredited from [SecLists](https://github.com/danielmiessle
 | Uses entropy formula | Uses SHA-256 cryptography | Uses different methods | Glues all files    |
 | Collapse entropy formula| hashing.py | View [BFAR.txt](https://github.com/Gakaj/CyberSecurityProject---AttackSim/blob/main/Cybersecurity%20Project/research/BruteForceAttackResearch.txt)  | ***Final Program***|
 
-Used OWASP.org
+Accreddited OWASP.org for info on [dictionary attacks](https://owasp.org/www-community/attacks/Brute_force_attack) 

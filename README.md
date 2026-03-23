@@ -9,7 +9,7 @@
 Common_passwords.txt accredited from [SecLists](https://github.com/danielmiessler/SecLists/tree/master) - Compiled by DanielMiessler
 
 
-<insFiles Summary:<\ins>
+<ins>Summary:<\ins>
 
 | entropy.py | hashing.py | attack.py | main.py   |
 |------------|------------|-----------|-----------|

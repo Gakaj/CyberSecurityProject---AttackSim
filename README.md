@@ -26,3 +26,5 @@ Also accredit [account enumeration](https://owasp.org/www-project-web-security-t
 
 <details><summary>Entropy Equation</summary>![Alt text]("\\thurstoncollege.org\Data\StudentHome\20Entry\011368\Pictures\Screenshots\EntropyEquation.jpg")
 </details>
+
+

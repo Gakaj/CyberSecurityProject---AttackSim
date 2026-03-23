@@ -24,5 +24,5 @@ Common_passwords.txt accredited from [SecLists](https://github.com/danielmiessle
 Accreddited OWASP.org for info on [dictionary attacks](https://owasp.org/www-community/attacks/Brute_force_attack).
 Also accredit [account enumeration](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/04-Testing_for_Account_Enumeration_and_Guessable_User_Account)
 
-<details><summary>Entropy Equation</summary>[download](https://github.com/user-attachments/assets/d7739ee8-4fe3-4f14-ab62-c48526b838b1)
+<details><summary>Entropy Equation</summary>(https://github.com/user-attachments/assets/d7739ee8-4fe3-4f14-ab62-c48526b838b1)
 </details>

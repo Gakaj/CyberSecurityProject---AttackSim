@@ -14,13 +14,15 @@ def simpleHash(password):
 
 
 def sha256Hash(password):
-  hashed = hashlib.sha256(password.encode()).hexdigest() #prepare password in byte form, then digest into hex rather than byte form.
+  hashed = hashlib.sha256(password.encode("utf-8")).hexdigest() #prepare password in byte form, then digest into hex rather than byte form.
   return hashed
 
 User_password = {
   "user123" : simpleHash(password),
   "user1234" : sha256Hash(password)
 }
+
+
 
 
 

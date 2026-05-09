@@ -1,0 +1,67 @@
+
+
+"Entropy measures how unpredictable a password is."
+
+-- How many guesses would an attacker need, on average, to crack this password?
+
+Entropy uses a formula:
+    Entropy = log2(N^L)
+    N = size of character set , L = password length
+    
+    Using log rules: - When coding:
+        Entropy = L x log2(N)
+
+To calculate entropy:
+S1: Work out the character set size(N)
+Typical:
+    - Lowercase letters -> 26
+    - Uppercase letters -> 26
+    - digits -> 10
+    - symbols -> ~32(depends on leniency)
+
+Therefore:
+    - If a password uses:
+        Lowercase + uppercase + digits
+    Then:
+        N = 26 + 26 + 10 = 62
+
+Calculate Entropy value using this value(N)
+
+Example: Password  :: P@ssw0rd!
+Length = 9,  Char set: uppercase, Lowercase, digit, symbol   ->  N = ~94 assuming symbols
+
+Entropy = 9 x log2(94) =~ 58.99 bits 
+Measured in bits: Represents one binary decision - 
+    How many binary decisions(Y/N) must an attacker take to guess a password.
+
+log2(x) - "What power do I rasie 2 to, to get X?" - inverse of powers of 2
+    log2(8) = 3
+
+Interpreting entropy:
+
+| Entropy (bits) | Strength    |
+| -------------- | ----------- |
+| < 28           | Very weak   |
+| 28 - 35          | Weak        |
+| 36 - 59          | Reasonable  |
+| 60 - 127         | Strong      |
+| 128+           | Very strong |
+
+However ! Entropy assumes: random character selection, no reuse of patterns.
+
+Entropy then overestimates password security when users choose predictable patters.
+    Such as substitutions like @ for.
+
+Therefore, to make this value more inclusive:
+reduce entropy value if repeated characters and penalise dict words -- 
+Use to improve .
+
+
+
+
+Coding:
+
+    Inspect password 
+    calculate size of character set(N)
+    Apply entropy formula based of parameters of no. of digits.
+    

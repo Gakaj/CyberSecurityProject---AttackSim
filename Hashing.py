@@ -22,9 +22,6 @@ User_password = {
   "user1234" : sha256Hash(password)
 }
 
-with open("text_files\common_passwords.txt", "r") as f:
-  content = f.read()
-  #print(content)
 
-f.close()
+
 

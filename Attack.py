@@ -5,3 +5,4 @@ import Entropy
 
 
 def simplestBruteForce():
+    pass

@@ -81,15 +81,21 @@ def entropyCalculator(password):
 entropyValue = entropyCalculator(password)
 print(entropyValue)
 
-with open("text_files//common_passwords.txt", "r") as f:
-    content = f.read()
 
-    if password in content:
-        print("Password entered is in common_password")
-        print("Therefore would be easy to crack")
-    else:
-        print("NOT IN COMMON_PASSWORDS")
-        print("CAN START TO INFER PASSWORD AS POSSIBLY STRONG")
-        print("HOWEVER CAN STILL BE WEAK AS MAY BE IN ANOTHER COMMON PASSWORDS LONGER")
+def AssessmentTextFile(password):   
+    with open("text_files//common_passwords.txt", "r") as f:
+        content = f.read()
 
-
+        if password in content:
+            print("Password entered is in common_password")
+            print("Therefore would be easier to crack")
+        else:
+            print("NOT IN COMMON_PASSWORDS")
+            print("CAN START TO INFER PASSWORD AS POSSIBLY STRONG")
+            print("HOWEVER CAN STILL BE WEAK AS MAY BE IN ANOTHER COMMON PASSWORDS LONGER")
+time.sleep(1)
+choice = input("Do you wish to see if password is in common_passwords.txt\n If not in parent directory (text_files) type(YES/NO)").strip().upper()
+if choice == "YES" or choice == "Y":
+    AssessmentTextFile(password)
+else:
+    quit()

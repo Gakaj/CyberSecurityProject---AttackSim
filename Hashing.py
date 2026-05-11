@@ -12,20 +12,20 @@ def simpleHash(password):
   return hashed
   
 
-
-def read_hash_wordlist():
-  path = input("Enter path to wordlist: ").strip().strip('""') # remove whitespace and other
+path = input("Enter path to wordlist: ").strip().strip('""') # remove whitespace and other
+def read_hash_wordlist(path):
 
   #validate path
   if not os.path.isfile(path):
     print(ValueError("Incorrect path"))
-    read_hash_wordlist()
+    quit()
   
-  elif os.path.isfile(path):
-    print("TRUE")
 
-read_hash_wordlist()
-  
+  with open(path, "r", encoding="utf-8", errors="ignore") as file:
+    for line in file:
+      original = line.strip() # remove whitepsace and other problems
+      if not original: # skip if empty/errors to continue
+        continue
 
 
 

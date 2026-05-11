@@ -4,11 +4,11 @@
 # Use EntropyCalcResearch.txt
 
 
-import math, string, time
+import math, string, os,time
 
 password = input("Input password to be tested:\n") # determine Password to be tested
 
-def entropy_program():
+def entropy_program(password):
     def entropyCalculator(password):
         length = 0
         length = len(password) # find length of password
@@ -82,20 +82,29 @@ def entropy_program():
     print(entropyValue)
 
 
-    def AssessmentTextFile(password):   
-        with open("text_files//common_passwords.txt", "r") as f:
-            content = f.read()
+    def AssessmentTextFile(password):  
+    #   while True:
+    #     path = input("Enter path to wordlist: ").strip().strip('""') # remove whitespace and other
+    #     #validate path
+    #     if os.path.isfile(path):
+    #         break #stop asking for path
 
-            if password in content:
+    #     print(ValueError("Incorrect path")) #if not correct type
+        path = input("Input path to wordlist: ").strip().strip('" "')
+        with open(path, "r") as f:
+            content = f.read()
+        if password in content:
                 print("Password entered is in common_password")
                 print("Therefore would be easier to crack")
-            else:
+        else:
                 print("NOT IN COMMON_PASSWORDS")
                 print("CAN START TO INFER PASSWORD AS POSSIBLY STRONG")
                 print("HOWEVER CAN STILL BE WEAK AS MAY BE IN ANOTHER COMMON PASSWORDS LONGER")
     time.sleep(1)
-    choice = input("Do you wish to see if password is in common_passwords.txt\n If not in parent directory (text_files) type(YES/NO)").strip().upper()
+    choice = input("Do you wish to see if password is in wordlist type(YES/NO)").strip().upper()
     if choice == "YES" or choice == "Y":
         AssessmentTextFile(password)
     else:
         quit()
+
+entropy_program(password)

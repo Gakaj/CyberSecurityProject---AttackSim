@@ -12,14 +12,15 @@ def simpleHash(password):
   return hashed
   
 
-path = input("Enter path to wordlist: ").strip().strip('""') # remove whitespace and other
-def read_hash_wordlist(path):
 
+def read_hash_wordlist():
+  while True:
+    path = input("Enter path to wordlist: ").strip().strip('""') # remove whitespace and other
   #validate path
-  if not os.path.isfile(path):
-    print(ValueError("Incorrect path"))
-    quit()
-  
+    if os.path.isfile(path):
+      break #stop asking for path
+
+  print(ValueError("Incorrect path")) #if not correct type
 
   with open(path, "r", encoding="utf-8", errors="ignore") as file:
     for line in file:
@@ -34,6 +35,6 @@ def read_hash_wordlist(path):
 
 
 
-for line in read_hash_wordlist(path): #print every hashed line
+for line in read_hash_wordlist(): #print every hashed line
   print(line)
 

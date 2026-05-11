@@ -2,7 +2,7 @@
 #will think of way to solve this after completing attack simulation. 09.05.2026
 
 import Entropy
-from Hashing import read_hash_wordlist
+import Hashing
 
 
 
@@ -17,7 +17,9 @@ def validate_email(username):
 
 # Acting as target 
 def target_enter():
-    username = input("Enter username of email")
+    username = input("Enter username of email: ")
     validate_email(username)
-    password = input("Enter password to email")
+    password = input("Enter password to email: ")
     Entropy.entropy_program(password)
+
+target_enter()

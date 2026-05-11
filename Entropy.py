@@ -6,7 +6,7 @@
 
 import math, string, os,time
 
-password = input("Input password to be tested:\n") # determine Password to be tested
+
 
 def entropy_program(password):
     def entropyCalculator(password):
@@ -74,7 +74,7 @@ def entropy_program(password):
                 return "Very Strong Bravo!"
 
         assessment = assessment(EntropyValue)
-        print(f"From this table we can see the value of {EntropyValue} is {assessment}")
+        print(f"From this table we can see {password} has the value of {EntropyValue} is {assessment}")
         return EntropyValue
         
 
@@ -83,21 +83,21 @@ def entropy_program(password):
 
 
     def AssessmentTextFile(password):  
-    #   while True:
-    #     path = input("Enter path to wordlist: ").strip().strip('""') # remove whitespace and other
-    #     #validate path
-    #     if os.path.isfile(path):
-    #         break #stop asking for path
+        while True:
+          path = input("Enter path to wordlist: ").strip().strip('""') # remove whitespace and other
+          #validate path
+          if os.path.isfile(path):
+            break #stop asking for path
 
-    #     print(ValueError("Incorrect path")) #if not correct type
-        path = input("Input path to wordlist: ").strip().strip('" "')
+        print(ValueError("Incorrect path")) #if not correct type
+    
         with open(path, "r") as f:
             content = f.read()
         if password in content:
-                print("Password entered is in common_password")
+                print(f"Password entered is in {path}")
                 print("Therefore would be easier to crack")
         else:
-                print("NOT IN COMMON_PASSWORDS")
+                print(f"NOT IN {path}")
                 print("CAN START TO INFER PASSWORD AS POSSIBLY STRONG")
                 print("HOWEVER CAN STILL BE WEAK AS MAY BE IN ANOTHER COMMON PASSWORDS LONGER")
     time.sleep(1)
@@ -107,4 +107,8 @@ def entropy_program(password):
     else:
         quit()
 
-entropy_program(password)
+if __name__ == "__main__":
+    password = input("Input password to be tested:\n") # determine Password to be tested
+    entropy_program()
+else:
+    pass

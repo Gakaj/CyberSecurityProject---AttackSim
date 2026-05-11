@@ -1,0 +1,5 @@
+# .gitignore folders and files
+
+research/
+text_files/
+__pycache__/

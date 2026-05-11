@@ -25,10 +25,15 @@ def read_hash_wordlist(path):
     for line in file:
       original = line.strip() # remove whitepsace and other problems
       if not original: # skip if empty/errors to continue
-        continue
+        continue #go to next iteration
+
+
+      hashed = hashlib.sha256(original.encode()).hexdigest() # encode data and transform into sha256 hash
+                                                             # as well as making it a hex NOT a byte and not output object.
+      yield hashed # makes the function a generator by returning an iterable - makes it more efficient as no longer held in RAM
 
 
 
-
-
+for line in read_hash_wordlist(path): #print every hashed line
+  print(line)
 

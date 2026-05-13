@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 Ignore files
 
 /text_files/
 /research/
 /__pycache__/
+=======
+# .gitignore folders and files
+
+research/
+text_files/
+__pycache__/
+

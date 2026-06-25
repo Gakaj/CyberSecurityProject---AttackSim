@@ -1,18 +1,11 @@
 import hashlib, os, sys, argparse
 
 
-def hashing():
-  parser = argparse.ArgumentParser(
+def hashing(wordlist):
+  hash_parser = argparse.ArgumentParser(
     description= "Hash a wordlist using sha-256"
   )
 
-
-  parser.add_argument(
-      "-w",
-      "--wordlist",
-      required=True,
-      help="Path to wordlist"  
-  )
 
 
     
@@ -33,7 +26,7 @@ def hashing():
           yield hashed # makes the function a generator by returning an iterable - makes it more efficient as no longer held in RAM
 
 
-  args = parser.parse_args()
+  args = hash_parser.parse_args()
   for line in read_hash_wordlist(args.wordlist): #print every hashed line
     print(line)
 

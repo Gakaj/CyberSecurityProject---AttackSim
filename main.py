@@ -6,9 +6,7 @@ import Hashing
 import argparse
 
 
-parser = argparse.ArgumentParser(
-    description="Cybersecurity Toolkit"
-)
+parser = argparse.ArgumentParser()
 
 subparsers = parser.add_subparsers(
     dest="command",
@@ -28,18 +26,7 @@ hash_parser.add_argument(
 args = parser.parse_args()
 if args.command == "hash":
     print(f"Hashing {args.wordlist}")
-    Hashing.hashing()
+    Hashing.hashing(args.wordlist)
 
 
 
-def validate_email(username):
-    pass
-
-
-# Acting as target 
-def target_enter():
-    username = input("Enter username of email: ")
-    validate_email(username)
-    password = input("Enter password to email: ")
-
-target_enter()

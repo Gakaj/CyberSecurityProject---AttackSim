@@ -25,16 +25,16 @@ def entropy_program(password):
 
             if any(char.islower() for char in password):
                 N += 26
-                print("Lowercase")
+                # print("Lowercase")
             if any(char.isupper() for char in password):
                 N += 26
-                print("Uppercase")
+                # print("Uppercase")
             if any(char.isdigit() for char in password):
                 N += 10
-                print("Digit")
+                # print("Digit")
             if any(char in symbols for char in password):
                 N += len(symbols)
-                print("Symbols")
+                # print("Symbols")
             if N >= 1:
                 return N
             else:
@@ -99,7 +99,7 @@ def entropy_program(password):
         else:
                 print(f"NOT IN {path}")
                 print("CAN START TO INFER PASSWORD AS POSSIBLY STRONG")
-                print("HOWEVER CAN STILL BE WEAK AS MAY BE IN ANOTHER COMMON PASSWORDS LONGER")
+                print("HOWEVER CAN STILL BE WEAK AS MAY BE IN ANOTHER WORDLIST")
     time.sleep(1)
     choice = input("Do you wish to see if password is in wordlist type(YES/NO)").strip().upper()
     if choice == "YES" or choice == "Y":
@@ -108,7 +108,6 @@ def entropy_program(password):
         quit()
 
 if __name__ == "__main__":
-    password = input("Input password to be tested:\n") # determine Password to be tested
     entropy_program()
 else:
     pass

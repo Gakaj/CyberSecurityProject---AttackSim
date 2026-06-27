@@ -23,10 +23,24 @@ hash_parser.add_argument(
     required=True,
     help="Path to wordlist"
   )
+
+entropy_parser = subparsers.add_parser(
+    "entropy",
+    help = "Calculate shannon entropy on entered password"
+)
+
+entropy_parser.add_argument(
+    "-p",
+    "--password",
+    required=True,
+    help="Password to test stength on"
+)
 args = parser.parse_args()
 if args.command == "hash":
     print(f"Hashing {args.wordlist}")
     Hashing.hashing(args.wordlist)
+if args.command == "entropy":
+    Entropy.entropy_program(args.password)
 
 
 

@@ -29,4 +29,9 @@ Also accredit [account enumeration](https://owasp.org/www-project-web-security-t
 </details>
 <details><summary>Entropy Equation</summary>E = L x log<sub>2</sub>(R)</details>
 
+## What it does so far:
+
+1. Calculates Shannon entropy
+2. Implements secure hashing
+
 
